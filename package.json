@@ -1,0 +1,45 @@
+{
+	"name": "auto-suggest",
+	"homepage": "https://manos-liakos.dev/hackernews-autocomplete",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-react-16": "^1.15.4",
+		"html-react-parser": "^0.14.0",
+		"prop-types": "^15.7.2",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-scripts": "3.4.0",
+		"react-test-renderer": "^16.13.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"babel-eslint": "10.0.3",
+		"eslint-config-airbnb": "^18.2.0",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-jsx-a11y": "^6.3.1",
+		"eslint-plugin-react": "^7.20.6",
+		"eslint-plugin-react-hooks": "^4.1.1"
+	}
+}
