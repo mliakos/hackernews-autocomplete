@@ -6,7 +6,7 @@ Create an auto-suggest input field where the user would type at least 3 letters 
 a Hacker News story title and display the available stories in a dropdown list.
 
 - Use HackerNews API
-- Render recorative search button
+- Render decorative search button
 
 ## Demo
 
