@@ -87,6 +87,8 @@ const Autosuggest = props => {
 	/*** Other functions ***/
 
 	const fetchResults = async () => {
+		let canceled = false;
+
 		// Initially try to fetch from cache
 		try {
 			const cached = JSON.parse(localStorage.getItem(`${inputValue}`));
@@ -106,13 +108,18 @@ const Autosuggest = props => {
 				// Caching data
 				localStorage.setItem(inputValue, JSON.stringify(data.hits));
 
-				setData(data.hits);
+				// Preventing race condition by canceling stale requests
+				if (!canceled) {
+					setData(data.hits);
+					setLoading(false);
+				}
 			} catch (e) {
 				alert("There was an error during the request.");
+				setLoading(false);
 			}
-
-			setLoading(false);
 		}
+
+		return () => (canceled = true);
 	};
 
 	const loadHighlightedStory = () => {
